@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Employees</div>
+                <div class="card-header">
+                  EMPLOYEES
+
+                </div>
+                <a class="btn btn-primary" href="{{route('emp_create')}}">CREATE NEW EMPLOYEE</a>
 
                 <div class="card-body">
                   <ul>
