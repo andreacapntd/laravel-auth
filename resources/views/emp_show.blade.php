@@ -28,10 +28,11 @@
                   <br><br>
                   @auth
                     <a class="btn btn-primary" href="#">EDIT</a>
+                    <a class="btn btn-primary" href="{{route('emp_create')}}">CREATE</a>
                     <a class="btn btn-danger" href="{{route('emp_destroy', $emp -> id)}}">DELETE</a>
 
                   @else
-                    <span>If you want to edit or delete, you have to log in</span>
+                    <span>If you want to edit, delete or create, you have to log in</span>
 
                   @endauth
 

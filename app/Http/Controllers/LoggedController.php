@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Location;
 use Illuminate\Http\Request;
 
 class LoggedController extends Controller
@@ -18,6 +19,23 @@ class LoggedController extends Controller
 
     $emp = Employee::findOrFail($id);
     $emp -> delete();
+
+    return redirect() -> route('emp_index');
+
+  }
+
+  public function create() {
+
+    $locs = Location::all();
+
+    return view('emp_create', compact('locs'));
+
+  }
+
+  public function store(Request $request) {
+
+    $data = $request -> all();
+    Employee::create($data);
 
     return redirect() -> route('emp_index');
 
